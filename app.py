@@ -60,7 +60,7 @@ def county_data():
         query = """
         SELECT ch.*
         FROM county_health_rankings ch
-        JOIN zip_county zc ON ch.fipscode = zc.fipscode
+        JOIN zip_county zc ON ch.fipscode = zc.county_code
         WHERE zc.zip = ? AND ch.measure_name = ?
         """
         
